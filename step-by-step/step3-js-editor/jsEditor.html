@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Editor</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100vw;
+            height: 50px;
+            background-color: rgb(60, 60, 60);
+            position: fixed;
+            top: 0;
+            display: flex;
+        }
+
+        .header-left {
+            flex: 1;
+        }
+
+        .header-mid {
+            flex: 2;
+            text-align: center;
+            margin: auto;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .header-right {
+            flex: 1;
+            text-align: right;
+            margin: auto;
+        }
+
+        .runbtn {
+            background-color: #bfdfc1; /* Green */
+            border: none;
+            border-radius: 5px;
+            color: rgb(90, 90, 90);
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .editor {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .code-container {
+            flex: 3;
+            height: 100%;
+        }
+
+        #code-panel {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(40, 40, 40);
+            color: #fff;
+            font-family: courier, monospace;
+            font-size: medium;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+        .divider {
+            height: 100%;
+            width: 3px;
+            background-color: rgb(60, 60, 60);
+        }
+
+        .console-container {
+            flex: 2;
+            height: 100%;
+        }
+
+        #code-output {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(40, 40, 40);
+            color: #fff;
+            font-family: courier, monospace;
+            font-size: medium;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"></div>
+        <div class="header-mid">啦啦啦</div>
+        <div class="header-right">
+            <button class="runbtn" onClick="startExecution()">Run</button>
+        </div>
+    </div>
+    <div class="editor">
+        <div class="code-container">
+            <textarea id="code-panel" rows="6" cols="50" spellcheck="false"></textarea>
+        </div>
+        <div class="divider"></div>
+        <div class="console-container">
+            <div id="code-output"></div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="interpreter.js"></script>
+</body>
+</html>
