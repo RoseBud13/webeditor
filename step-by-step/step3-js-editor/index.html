@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Editor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"></div>
+        <div class="header-mid">啦啦啦</div>
+        <div class="header-right">
+            <button class="runbtn" onClick="startExecution()">Run</button>
+        </div>
+    </div>
+    <div class="editor">
+        <div class="code-container">
+            <textarea id="code-panel" rows="6" cols="50" spellcheck="false"></textarea>
+        </div>
+        <div class="divider"></div>
+        <div class="console-container">
+            <div id="code-output"></div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="interpreter.js"></script>
+</body>
+</html>
